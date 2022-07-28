@@ -43,7 +43,7 @@ export default {
   padding: 20px 10px;
   color: #fff;
   position: relative;
-  top: 30vh;
+  top: 25vh;
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

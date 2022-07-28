@@ -10,9 +10,9 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   routes: [
-    { path: "/", component: HomeVue },
-    { path: "/sobre", component: SobreVue },
-    { path: "/produtos", component: ProdutosVue },
+    { path: "/:bgColor", component: HomeVue },
+    { path: "/sobre/:bgColor", component: SobreVue },
+    { path: "/produtos/:bgColor", component: ProdutosVue },
     { path: "/contatos", component: ContatosVue },
   ],
 });

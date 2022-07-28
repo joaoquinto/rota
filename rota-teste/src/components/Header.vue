@@ -1,12 +1,11 @@
 <template>
-  <header class="container_header">
-    <router-link class="logo_header" to="/">Beacon</router-link>
+  <header class="container_header" :style="{ backgroundColor: background }">
+    <router-link class="logo_header" to="/9acd32">Beacon</router-link>
     <nav>
       <ul class="container__links">
-        <li><router-link to="/">Inicio</router-link></li>
-        <li><router-link to="/sobre">Sobre</router-link></li>
-        <li><router-link to="/produtos">Produtos</router-link></li>
-        <!--     <li><router-link to="/contatos">Contatos</router-link></li> -->
+        <li><router-link to="/9acd32">Inicio</router-link></li>
+        <li><router-link to="/sobre/1a243c">Sobre</router-link></li>
+        <li><router-link to="/produtos/216297">Produtos</router-link></li>
       </ul>
     </nav>
   </header>
@@ -15,6 +14,11 @@
 <script>
 export default {
   name: "header-beacon",
+  computed: {
+    background() {
+      return `#${this.$route.params.bgColor}`;
+    },
+  },
 };
 </script>
 
@@ -41,13 +45,13 @@ export default {
   color: #000;
 }
 
-.logo_header {
+a.logo_header {
   text-transform: uppercase;
+  color: #fff;
   font-weight: bold;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   cursor: pointer;
-  margin-bottom: 30px;
 }
 
 .container__links {
@@ -71,7 +75,7 @@ export default {
   margin-top: 10px;
 }
 
-.container__links li:hover {
+.container__links li {
   background: #fff;
 }
 
