@@ -4,6 +4,10 @@
     <nav>
       <ul class="container__links">
         <li><router-link to="/9acd32">Inicio</router-link></li>
+        <!-- Passando os parametros na rota
+             Esses dados pode ser passados com parametros do data
+             usando o v-bind no (:to="")
+         -->
         <li><router-link to="/sobre/1a243c">Sobre</router-link></li>
         <li><router-link to="/produtos/216297">Produtos</router-link></li>
       </ul>
@@ -15,6 +19,7 @@
 export default {
   name: "header-beacon",
   computed: {
+    /* Acessando os parametros */
     background() {
       return `#${this.$route.params.bgColor}`;
     },
